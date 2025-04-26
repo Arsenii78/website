@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -6,12 +6,12 @@ app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('buttons1.html', title='Домашняя страница',)
+    return render_template('buttons1.html')
 
 
 @app.route('/history')
 def history():
-    pass
+    return render_template('buttons_history.html')
 
 if __name__ == '__main__':
     app.run()
