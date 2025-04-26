@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+        .history {
+           width:1000px;
+           height:50px;
+           background:white;
+           border-color: #000000;
+           border-radius: 5px;
+           color:black;
+           font-size: 30px
+
+        }
+        .history:hover {
+            background-color:green;
+        }
+    .sight {
+           position: absolute;
+           width:900px;
+           height:50px;
+           background:white;
+           border-color: #000000;
+           border-radius: 5px;
+           color:black;
+           font-size: 30px
+        }
+        .sight:hover {
+            background-color:green;
+        }
+</style>
+ <form action="http://127.0.0.1:5000/history">
+        <button type="submit" class="history">История</button>
+        <button type="submit" class="sight">Достопримечательности</button>
+ </form>
+{% endblock %}
