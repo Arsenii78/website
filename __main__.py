@@ -24,8 +24,7 @@ def reqister():
             return redirect('/base')
         user = User(
             name=form.name.data,
-            email=form.email.data,
-            about=form.about.data
+            email=form.email.data
         )
         user.set_password(form.password.data)
         db_sess.add(user)
@@ -41,6 +40,10 @@ def index():
 @app.route('/history')
 def history():
     return render_template('buttons_history.html')
+
+@app.route('/sight')
+def sight():
+    return render_template('buttons_sightseeing.html')
 
 
 
