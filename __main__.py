@@ -65,9 +65,8 @@ def sight():
     return render_template('buttons_sightseeing.html')
 
 @app.errorhandler(404)
-def not_found(error):
+def not_found():
     return make_response(jsonify({'error': 'Not found'}), 404)
-
 
 @app.errorhandler(400)
 def bad_request(_):
